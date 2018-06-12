@@ -1,0 +1,52 @@
+<div class="container main-container">
+    <h1>Motorcycles App</h1>
+    <table class="table table-striped">
+        <thead class="thead-inverse">
+            <tr>
+                <th>#</th>
+                <th>Reference</th>
+                <th>Displacement</th>
+                <th>Type</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of motorcycles | keys">
+                <th scope="row">1</th>
+                <td>{{i}}</td>
+                <td>motorcycles</td>
+                <td>{{motorcycles[i].type}}</td>
+                <td>{{motorcycles[i].stock}}</td>
+                <td>{{motorcycles[i].price}}</td>
+                <td>
+                    <button type="button" class="btn btn-warning btn btn-primary btn-sm">Update</button>
+                    <button type="button" class="btn btn-danger btn btn-primary btn-sm">Delete</button>
+                </td>
+
+
+            </tr>
+
+            <!-- <tbody>
+                <tr *ngFor="let k of heroes | keys; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{heroes[k].name}}</td>
+                    <td>{{heroes[k].house}}</td>
+                    <td class="text-right w120">
+                        <button type="button" class="btn btn-outline-success" [routerLink]="['/heroe',k]">Edit</button>
+                        <button type="button" class="btn btn-outline-danger" (click)="deleteHeroe(k)">Delete</button>
+                    </td>
+    
+                </tr>
+    
+            </tbody> -->
+
+        </tbody>
+    </table>
+    <div>
+        <button type="button" class="btn btn-primary btn btn-primary btn-sm">New</button>
+    </div>
+
+</div>
